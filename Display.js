@@ -2,11 +2,11 @@ class Display{
 constructor(displayValorAnterior,displayValorAtual){
 this.displayValorAtual = displayValorAtual;
 this.displayValorAnterior = displayValorAnterior;
-this.calculador = new Calculadora();
+this.calculadora = new Calculadora();
 this.tipoOperation = undefined;
 this.valorAtual = '';
 this.valorAnterior = '';
-this.signos = {
+this.sig = {
     dividir:'÷',
     multiplicar:'x',
     diminuir:'-',
@@ -32,18 +32,18 @@ computar(tipo){
 }
 agregarNumero(numero) {
     if(numero === '.' && this.valorAtual.includes('.'))return
-    this.valorAtual = this.valorAtual.toString() + numero.toString;
+    this.valorAtual = this.valorAtual.toString() + numero.toString();
     this.imprimirValores();
 }
 imprimirValores(){
     this.displayValorAtual.textContent = this.valorAtual;
-    this.displayValorAnterior.textContent = `${this.valorAnterior} ${this.signos[this.tipoOperation] || ''}`;
+    this.displayValorAnterior.textContent =`${this.valorAnterior} ${this.sig[this.tipoOperation] || ''}`;
 }
 calcular(){
     const valorAnterior= parseFloat(this.valorAnterior);
     const valorAtual= parseFloat(this.valorAtual);
     
     if (isNaN(valorAtual) || isNaN(valorAnterior))return
-    this.valorAtual =this.calculador[this.tipoOperation](valorAnterior, valorAtual);
+    this.valorAtual =this.calculadora[this.tipoOperation](valorAnterior, valorAtual);
 }
 }

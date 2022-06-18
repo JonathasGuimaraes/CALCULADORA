@@ -1,33 +1,14 @@
-const displayValorAnterior= document.getElementById('valor-anterior');
-const displayValorAtual= document.getElementById('valor-atual');
-const botoneNumeros = document.querySelectorAll('numero');
-const botoneOperadores = document.querySelectorAll('operador');
+const displayValorAnterior=document.getElementById('valor-anterior');
+const displayValorAtual=document.getElementById('valor-atual');
+const botaoNumero=document.querySelectorAll('.numero');
+const botaoOperation=document.querySelectorAll('.operador');
 
-/*const display =new display (displayValorAnterior,displayValorAtual);
+const display = new Display(displayValorAnterior, displayValorAtual);
 
-botaoNumeros.forEach(botone => {
-    botone.addEventListener('click',() => display.agregarNumero(botone.innerHTML));
+botaoNumero.forEach(botao => {
+    botao.addEventListener('click',() => display.agregarNumero(botao.innerHTML))
 });
 
-botaoOperadores.forEach(botone=>{
-    botone.addEventListener('click',()=>display.computar(bot.value))
+botaoOperation.forEach(botao=>{
+    botao.addEventListener('click',() => display.computar(botao.value))
 });
-*/
-
-
-
-
-
-
-
-
-
-
-const calculadora = new Calculadora();
-
-console.log(calculadora.somar(2,3))
-console.log(calculadora.diminuir(2,3))
-console.log(calculadora.multiplicar(2,3))
-console.log(calculadora.dividir(2,3))
-
-
